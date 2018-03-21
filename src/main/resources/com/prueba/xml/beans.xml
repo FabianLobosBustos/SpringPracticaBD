@@ -15,6 +15,10 @@
 	<bean id ="daoEquipoImp" class="com.prueba.DaoImp.DaoEquipoImp">
 		<property name="dataSource" ref="dataSource"> </property>
 	</bean>
+	
+	<bean id ="daoJugadorImp" class="com.prueba.DaoImp.DaoJugadorImp">
+		<property name="dataSource" ref="dataSource"> </property>
+	</bean>
 
 	<bean id ="messi" class="com.prueba.beans.Jugador">
 		<property name="id" value="1"> </property>

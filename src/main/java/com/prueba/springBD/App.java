@@ -5,6 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.prueba.DAO.DaoEquipo;
 import com.prueba.DaoImp.DaoEquipoImp;
+import com.prueba.DaoImp.DaoJugadorImp;
 import com.prueba.beans.Equipo;
 import com.prueba.beans.Jugador;
 
@@ -22,9 +23,19 @@ public class App
 		Jugador messi = (Jugador) appContext.getBean("messi");
 		Equipo barcelona = (Equipo) appContext.getBean("barcelona");
 		
+		Equipo realMadrid = new Equipo();
+		realMadrid.setNombre("realMadrid");
+		realMadrid.setId(2);
+		
+		Equipo juventus = new Equipo();
+		juventus.setNombre("juventus");
+		juventus.setId(3);
 		
 		DaoEquipoImp daoEquipo = (DaoEquipoImp) appContext.getBean("daoEquipoImp");
+		DaoJugadorImp daoJugador = (DaoJugadorImp) appContext.getBean("daoJugadorImp");
 		
-		daoEquipo.registrar(barcelona);
+		//daoJugador.registrar(messi);
+		daoEquipo.registrar(juventus);
+		
     }
 }
